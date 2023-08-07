@@ -10,7 +10,7 @@ export const ContactsItem = styled.form`
   margin-top: 20px;
 `;
 
-export const ContactsLabel = styled.label`
+export const ContactsSticker = styled.label`
   width: 100%;
   display: flex;
   flex-direction: column;

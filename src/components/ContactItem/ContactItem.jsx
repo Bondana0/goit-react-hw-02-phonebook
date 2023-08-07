@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   ContactsItem,
-  ContactsLabel,
+  ContactsSticker,
   ContactsBtn,
   ContactsInput,
 } from './ContactItems.styled';
@@ -30,7 +30,7 @@ export class ContactsForm extends Component {
     return (
       <>
         <ContactsItem onSubmit={this.formSubmit}>
-          <ContactsLabel>
+          <ContactsSticker>
             <span>Name</span>
             <ContactsInput
               onChange={this.inputChange}
@@ -41,8 +41,8 @@ export class ContactsForm extends Component {
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
               required
             />
-          </ContactsLabel>
-          <ContactsLabel>
+          </ContactsSticker>
+          <ContactsSticker>
             <span>Phone</span>
             <ContactsInput
               onChange={this.inputChange}
@@ -53,7 +53,7 @@ export class ContactsForm extends Component {
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
             />
-          </ContactsLabel>
+          </ContactsSticker>
           <ContactsBtn>Add contact</ContactsBtn>
         </ContactsItem>
       </>

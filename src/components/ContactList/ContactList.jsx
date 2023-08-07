@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import { Contact, ContactTitle, ContactBtn } from './Contact.styled';
 
-export const ContactList = ({ filteredContacts, onDeleteContact }) => {
+export const ContactList = ({ filteredContacts, onClick }) => {
   return (
     <ul>
       {filteredContacts.map(({ name, number, id }) => (
         <Contact key={id}>
           <ContactTitle>• {name}:</ContactTitle>
           <p>{number}</p>
-          <ContactBtn type="button" onDeleteContact={() => onDeleteContact(id)}>
+          <ContactBtn type="button" onClick={() => onClick(id)}>
             Delete
           </ContactBtn>
         </Contact>
@@ -25,5 +25,5 @@ ContactList.propTypes = {
       id: PropTypes.string.isRequired,
     })
   ),
-  onDeleteContact: PropTypes.func,
+  onClick: PropTypes.func,
 };
